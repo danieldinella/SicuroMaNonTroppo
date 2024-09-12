@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">    
+    <title>SicuroMaNonTroppo</title>
+    <link rel="icon" href="img/logo.png" type="image/png">
+    <!-- Include Bootstrap CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Include Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+    <!-- Include il tuo CSS personalizzato -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="header-container">
+        <div class="container text-center py-4">
+            <h1 class="text-success">SicuroMaNonTroppo</h1>
+            <p class="lead text-light">Dove la sicurezza è un optional... ma chi se ne preoccupa?</p>
+        </div>
+    </div>
+
+    <div class="container mt-4">
+        <div class="row justify-content-center">
+                    <div class="card-body">
+
+                        <h5 class="card-title text-green">Accedi al tuo account</h5>
+                        <p class="card-text text-light">
+                            Inserisci le tue credenziali qui sotto. Ricorda: il nostro sistema è così sicuro 
+                            da SQL Injection che dovresti scrivere una recensione se riesci a bypassarlo!
+                        </p>
+
+                        <form action="login.php" method="get">
+                            <div class="form-group">
+                                <label for="username" class="text-green">Username</label>
+                                <input type="text" id="username" name="username" class="form-control" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="password" class="text-green">Password</label>
+                                <input type="password" id="password" name="password" class="form-control" required>
+                            </div>
+                            <button type="submit" class="btn btn-success btn-block">Login</button>
+                        </form>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="text-center my-4">
+        <p class="text-light">&copy; 2024 SicuroMaNonTroppo. La tua sicurezza, a modo nostro.</p>
+    </footer>
+
+    <!-- Include Bootstrap JS and dependencies -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>

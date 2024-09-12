@@ -1,0 +1,8 @@
+# Usa MySQL 5.7 come base
+FROM mysql:5.7
+
+# Avvio del servizio MySQL con le configurazioni modificate
+CMD ["mysqld"]
+
+# Espone la porta di MySQL
+EXPOSE 3306

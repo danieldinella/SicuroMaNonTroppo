@@ -1,0 +1,33 @@
+version: '3.8'
+services:
+  db:
+    build:
+      context: .
+      dockerfile: Dockerfile.mysql
+    environment:
+      MYSQL_ROOT_PASSWORD: SQL1nject2024
+      MYSQL_DATABASE: sqlidb
+      MYSQL_USER: daniel
+      MYSQL_PASSWORD: danielpass
+    ports:
+      - "3306:3306"
+    volumes:
+      - ./database/init.sql:/docker-entrypoint-initdb.d/init.sql
+  web:
+    build:
+      context: .
+      dockerfile: Dockerfile.php
+    ports:
+      - "8080:80"
+    volumes:
+      - ./www:/var/www/html
+    depends_on:
+      - db
+    environment:
+      MYSQL_HOST: db
+      MYSQL_USER: sqluser
+      MYSQL_PASSWORD: SQL1nject2024
+      MYSQL_DATABASE: sqlidb
+
+volumes:
+  db_data:
